@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Dependency updates for JavaScript/Node.js
+  - package-ecosystem: "npm" # Use "yarn" if your project uses Yarn
+    directory: "/" # Directory containing the package.json file
+    schedule:
+      interval: "daily" # Check for updates daily
+    open-pull-requests-limit: 10 # Limit the number of open PRs from Dependabot
+    labels:
+      - "dependencies" # Add a "dependencies" label to PRs
+      - "automated-update"
+    reviewers:
+      - "wvides"
+    allow:
+      - dependency-type: "all" # Update both production and development dependencies
